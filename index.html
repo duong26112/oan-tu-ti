@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trò chơi kéo búa bao vui vẻ" />
+    <title>Kéo - Búa - Bao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hero">
+        <span class="eyebrow">Trò chơi âm thanh</span>
+        <h1>Kéo <span>•</span> Búa <span>•</span> Bao</h1>
+        <p>Hãy chọn một lựa chọn để đối thủ với máy.</p>
+      </header>
+
+      <section class="scoreboard" aria-label="Điểm của bạn">
+        <div class="score-card">
+          <span>Thắng</span>
+          <strong id="wins">0</strong>
+        </div>
+        <div class="score-card">
+          <span>Thua</span>
+          <strong id="losses">0</strong>
+        </div>
+        <div class="score-card">
+          <span>Hòa</span>
+          <strong id="draws">0</strong>
+        </div>
+      </section>
+
+      <section class="arena" aria-live="polite">
+        <div class="hand-display player-display">
+          <span class="display-label">Của bạn</span>
+          <div id="player-choice" class="choice-display">?</div>
+        </div>
+        <div class="versus">VS</div>
+        <div class="hand-display computer-display">
+          <span class="display-label">Của máy</span>
+          <div id="computer-choice" class="choice-display">?</div>
+        </div>
+      </section>
+
+      <div id="result" class="result" role="status">Chọn lựa chọn để chơi nhé!</div>
+
+      <section class="controls" aria-label="Lựa chọn trò chơi">
+        <button class="choice-button" data-choice="rock" type="button">
+          <span class="choice-emoji">✊</span>
+          <span>Kéo</span>
+        </button>
+        <button class="choice-button" data-choice="paper" type="button">
+          <span class="choice-emoji">✋</span>
+          <span>Búa</span>
+        </button>
+        <button class="choice-button" data-choice="scissors" type="button">
+          <span class="choice-emoji">✌️</span>
+          <span>Bao</span>
+        </button>
+      </section>
+
+      <button id="reset-button" class="reset-button" type="button">Đặt lại điểm</button>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
